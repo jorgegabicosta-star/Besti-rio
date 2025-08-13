@@ -199,3 +199,4 @@ function loadMonsters() {
 
 document.addEventListener("DOMContentLoaded", loadMonsters);
 
+
