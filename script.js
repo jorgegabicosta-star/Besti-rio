@@ -82,7 +82,7 @@ const monsters = [
   {
     name: "Kulve Taroth",
     category: "dragao",
-    habitat: "Área Desértica",
+    habitat: "Subsolo",
     weaknesses: "Água, Gelo",
     description: `Kulve Taroth é um dragão ancião imenso que acumula tesouros e ouro em sua carapaça, refletindo uma luz dourada intensa. Mede 10 metros e é conhecido por ataques explosivos que devastam grandes áreas do deserto. Altamente territorial, esse dragão é considerado um dos alvos mais cobiçados por caçadores em busca de riquezas. Sua carapaça dourada é difícil de penetrar, tornando a batalha um desafio estratégico.`,
     size: "10 metros",
@@ -198,3 +198,4 @@ function loadMonsters() {
 }
 
 document.addEventListener("DOMContentLoaded", loadMonsters);
+
