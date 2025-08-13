@@ -1,0 +1,145 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('https://i.pinimg.com/1200x/b6/5f/5b/b65f5b71d92a18306669e2a3b5a61dd1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 0;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px 20px;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 0 0 8px #ff4500;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ff4500;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+  font-family: 'Cinzel', serif;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+}
+
+.monster {
+  background: #2a1a1a;
+  border: 2px solid #ff4500;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #ff4500aa;
+  display: flex;
+  padding: 20px;
+  gap: 25px;
+  align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.monster:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px #ff4500dd;
+}
+
+.monster img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: #1a1a1a;
+  box-shadow: inset 0 0 12px #ff4500aa;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.monster img:hover {
+  transform: scale(1.05);
+}
+
+.monster-info {
+  flex: 1;
+  color: #ffddb0;
+}
+
+.monster-info h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #ff5e00;
+  text-shadow: 0 0 6px #ff4500cc;
+}
+
+.monster-info p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #f0e6d2;
+}
+
+.monster-info table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  color: #f0e6d2;
+  box-shadow: 0 0 8px #ff4500cc inset;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.monster-info th, .monster-info td {
+  padding: 10px 14px;
+  border: 1px solid #ff4500aa;
+  text-align: left;
+}
+
+.monster-info th {
+  background: #441a00;
+  font-weight: 700;
+  color: #ff9c33;
+}
+
+@media (max-width: 900px) {
+  .monster {
+    flex-direction: column;
+    align-items: center;
+  }
+  .monster img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  .monster-info {
+    text-align: center;
+  }
+}
+
+/* Fonte especial para título */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
